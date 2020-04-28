@@ -1,19 +1,28 @@
 {% extends '_layouts/base.njk' %}
+  {% block jumbotron %}{% endblock %}
+
+{% block page_title %}{{members.name}} | {{ super() }} {% endblock %}
 
 {% block content %}
+<html lang="en">
 <article class="container">
   <div class="row">
     <div class="col-sm-4">
-      {% block info %}
-        <img src="https://placekitten.com/420/320" alt="" class="img-fluid">
-      {% endblock %}
+      <h1> {{members.name}} <h1>
+      <img src="img/members/{{ members.imagebw }}" class="img-fluid" alt="image of band member">
     </div>
-    <div class="col-sm-8">
-      {% block story %}
-        <h1>Entry headline goes here</h1>
-        <p>Entry text goes here</p>
-      {% endblock %}
+    <div class ="col-sm-8">
+      <p style="margin-bottom-5px"> {{ members.text | safe}}</p>
+      <p> Details of Member </p>
+        <ul>
+          <li> Born: {{ members.birthdate }}</li>
+          <li> Birthplace: {{ members.birthplace }}</li>
+          <li> Years in Queen: {{ members.tenure }}</li>
+          <li> Instruments: {{ members.instruments }}</li>
+        </ul>
+      
     </div>
   </div>
 </article>
+</html>
 {% endblock %}
