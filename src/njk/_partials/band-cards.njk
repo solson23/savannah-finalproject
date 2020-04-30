@@ -1,0 +1,14 @@
+<div class="row">
+  {% for member in queen.members %}
+  <div class="col-sm-6 col-lg-3">
+    <div class="card mb-4">
+      <img src="img/members/{{ member.imagebw }}" class="card-img-top img-fluid" alt="image of member">
+      <div class="card-body">
+        <h5 class="card-title">{{ member.name }}</h5>
+        <p class="card-text">Click the button below to learn more about this Queen member</p>
+        <a href="{{member.slug}}.html" class="btn btn-primary">Bio Page</a>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>

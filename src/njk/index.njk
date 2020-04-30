@@ -8,14 +8,20 @@
 <div class="container">
   <div class="row">
     <div class="col">
-      <h1>Who was Queen?</h1>
-      <p>This is a <a href="detail-entry-example.html">link to a blog entry example</a> which shows a simple detail entry page example. It uses the "data-entry.njk" layout.</p>
-      <p>This is a <a href="detail-book-shipping-news.html">link to a book page example</a> which uses a more complex detail layout (detail-book.njk) where data is pulled into the layout and the page calls for a specific row in the data.</p>
-        {% for member in queen.members %}
-          <h3 class="members-name"><a href="{{ member.slug }}.html">{{ member.name }}</a></h3>
-          <p class="members-instruments">{{ member.instruments }}</p>
-        {% endfor %}
+      <h1>The 'Champions' of Queen</h1>
+    </div>
+  </div>
+    {% include "_partials/band-cards.njk" %}
 
+  <div class="row">
+    <div class="col-sm-12">
+        <div class="card text-center">
+          <div class="card-body">
+            <h5 class="card-title">Albums</h5>
+            <p class="card-text">Discover the music of the iconic band, Queen.</p>
+            <a href="discography.html" class="btn btn-primary">Enter</a>
+          </div>
+        </div>
     </div>
   </div>
 </div>
