@@ -10,6 +10,7 @@
 // Option A: Include all of Bootstrap
 @import "../../node_modules/bootstrap/scss/bootstrap";
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap');
 
 // Option B: Include parts of Bootstrap
 // See https://getbootstrap.com/docs/4.1/getting-started/theming/#importing
@@ -23,3 +24,27 @@
 @import "nav";
 @import "jumbotron";
 @import "discography";
+@import "index";
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+}
+
+h5 {
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+}
+
+p, ul {
+    font-family: 'Noto Serif', serif;
+}
+
+.btn-primary {
+    font-family: 'Noto Serif', serif;
+    background-color: rgb(100, 24, 39);
+}
+
+.card-title {
+    padding-top: 20px;
+}
